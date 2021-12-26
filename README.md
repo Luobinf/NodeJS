@@ -31,9 +31,9 @@ process.cwd()：返回当前Node进程的文件目录（绝对路径形式）。
 
 1. r：读取
 2. w：写入
-s: 同步
-+：增加相反操作
-x：排他方式
+3. s: 同步
+4. +：增加相反操作
+5. x：排他方式
 
 **r+ 和 w+ 的区别，当文件不存在时，r+ 不会创建文件，而会抛出异常，但 w+ 会创建文件；如果文件存在，r+ 不会自动清空文件，但 w+ 会自动把已有文件的内容清空。**
 
@@ -43,18 +43,18 @@ x：排他方式
 
 ### 文件操作常用方法
 
- fs.readFile 方法一次性地异步读取文件内容到内存中
- fs.writeFile 方法一次性地异步将文件内容写到文件中
- fs.appendFile 方法以异步的方式将 内容 插入到文件中，如果文件不存在会自动创建
- fs.copyFile(src, dest, (err) => {}) 方法以异步的方式将 src的内容 拷贝到 dest 文件中
- fs.unlink(filename, callback) 方法删除文件名为 filename 的文件
+ 1. fs.readFile 方法一次性地异步读取文件内容到内存中
+ 2.  fs.writeFile 方法一次性地异步将文件内容写到文件中
+ 3. fs.appendFile 方法以异步的方式将 内容 插入到文件中，如果文件不存在会自动创建
+ 4. fs.copyFile(src, dest, (err) => {}) 方法以异步的方式将 src的内容 拷贝到 dest 文件中
+ 5. fs.unlink(filename, callback) 方法删除文件名为 filename 的文件
 
  **指定位置读写文件操作**
  
- fs.open()
- fs.read()
- fs.write()
- fs.close()
+ 1. fs.open()
+ 2. fs.read()
+ 3. fs.write()
+ 4. fs.close()
 
 
 ## NodeJS 如何读取超大文件 ？
