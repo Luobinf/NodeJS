@@ -5,9 +5,9 @@
 
 ## Path
 
-__dirname: 返回当前执行文件所在的目录（绝对路径形式）。
-__filename:  返回当前执行文件所在的路径（绝对路径形式）。
-process.cwd()：返回当前Node进程的文件目录（绝对路径形式）。
+1. __dirname: 返回当前执行文件所在的目录（绝对路径形式）。
+2. __filename:  返回当前执行文件所在的路径（绝对路径形式）。
+3. process.cwd()：返回当前Node进程的文件目录（绝对路径形式）。
 
 方法：
 1. path.normalize() 将不规范化的路径进行规范化（平台不同规范化的结果也不同）
@@ -41,7 +41,9 @@ process.cwd()：返回当前Node进程的文件目录（绝对路径形式）。
 
 操作系统会为每个打开的文件分配一个名为文件描述符的**数值**标识，文件操作使用这些文件描述符来识别与追踪每个特定的文件，Window 系统使用了一个不同但概念类似的机制来追踪资源，为方便用户，NodeJS 抽象了不同操作系统间的差异，为所有打开的文件分配了数值的文件描述符。
 
-### 文件操作常用方法
+### 文件操作
+
+#### 常用方法
 
  1. fs.readFile 方法一次性地异步读取文件内容到内存中
  2.  fs.writeFile 方法一次性地异步将文件内容写到文件中
@@ -49,12 +51,19 @@ process.cwd()：返回当前Node进程的文件目录（绝对路径形式）。
  4. fs.copyFile(src, dest, (err) => {}) 方法以异步的方式将 src的内容 拷贝到 dest 文件中
  5. fs.unlink(filename, callback) 方法删除文件名为 filename 的文件
 
- **指定位置读写文件操作**
+#### 指定位置读写文件操作
  
- 1. fs.open()
- 2. fs.read()
- 3. fs.write()
- 4. fs.close()
+ 1. fs.open(path[, flags[, mode]], callback) 注意文件标志为flag，默认为 r 。
+ 2. fs.read(fd, buffer, offset, length, position, callback)
+ 3. fs.write(fd, buffer, offset, length, position, callback)
+ 4. fs.close(fd, callback)
+
+#### 目录(文件夹)操作
+
+1. fs.mkdir(path, [options], callback)
+2. fs.readdir(path, [options], callback)
+3. fs.rmdir(path, callback)
+
 
 
 ## NodeJS 如何读取超大文件 ？
