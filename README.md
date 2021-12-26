@@ -9,7 +9,6 @@
 2. __filename:  返回当前执行文件所在的路径（绝对路径形式）。
 3. process.cwd()：返回当前Node进程的文件目录（绝对路径形式）。
 
-方法：
 1. path.normalize() 将不规范化的路径进行规范化（平台不同规范化的结果也不同）
 2. path.join([…paths])方法返回一个拼接好的路径，例如 path.join('/foo', 'bar',);     // return  ‘/foo/bar’
 3. path.resolve([…paths]) 该方法将一些的 路径/路径段 解析为绝对路径，从右向左开始拼接路径。如果在处理完所有给定的 path 片段之后，还没有生成绝对路径，则使用当前工作目录。
