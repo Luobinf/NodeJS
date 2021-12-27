@@ -63,6 +63,19 @@
 2. fs.readdir(path, [options], callback)
 3. fs.rmdir(path, callback)
 
+## Buffer
+
+Static method: Buffer.alloc(size[, fill[, encoding]])
+
+
+The Buffer class is a global type for dealing with binary data directly. It can be constructed in a variety of ways.
+Static method: Buffer.alloc(size[, fill[, encoding]])
+
+
+	
+## Stream
+
+         
 
 
 ## NodeJS 如何读取超大文件 ？
